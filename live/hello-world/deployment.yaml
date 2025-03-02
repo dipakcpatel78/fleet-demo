@@ -47,7 +47,7 @@ spec:
     app: hello-world
   ports:
   - name: nodeport-hello-world
-	protocol: TCP
+    protocol: TCP
     port: 80 # The port the service exposes internally
     targetPort: 80 # The port the container listens on
     nodePort: 31000 # The port exposed on each Node's IP. Choose a port in the range 30000-32767
