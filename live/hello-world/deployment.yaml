@@ -35,19 +35,3 @@ spec:
             httpGet:
               port: web
               path: /
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: service-fleet-demo
-  namespace: fleet-demo
-spec:
-  type: NodePort
-  selector:
-    app: fleet-demo
-  ports:
-  - name: nodeport-fleet-demo
-    protocol: TCP
-    port: 80 # The port the service exposes internally
-    targetPort: 80 # The port the container listens on
-    nodePort: 32000 # The port exposed on each Node's IP. Choose a port in the range 30000-32767
