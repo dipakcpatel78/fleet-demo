@@ -4,7 +4,7 @@ metadata:
   name: fleet-demo
   namespace: fleet-demo
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: fleet-demo
@@ -30,7 +30,7 @@ spec:
             protocol: TCP
           env:
             - name: CONTAINER_COLOR
-              value: blue
+              value: orange
           readinessProbe:
             httpGet:
               port: web
